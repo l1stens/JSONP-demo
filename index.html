@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSONP</title>
+</head>
+<body>
+  <button id="button">实现一个 JSONP</button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    button.addEventListener('click', function () {
+      $.ajax({
+        url: "http://yang.com:8001/jsonp",
+        dataType: "jsonp",
+        success: function( response ) {
+         if(response === 'success') {
+           alert('请求成功')
+         }
+        }
+      })
+    })
+  </script>
+</body>
+</html>
